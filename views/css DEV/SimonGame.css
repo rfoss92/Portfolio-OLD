@@ -1,0 +1,109 @@
+body {
+  background-image: -ms-radial-gradient(center, circle, #0086b3 0%, #000 75%);
+  background-image: -webkit-radial-gradient(center, circle, #0086b3 0%, #000 75%);
+  color: white;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-align: center; 
+}
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 110% 0;  
+}
+#simonGame{
+  margin-top: -55px;
+  background: black;
+  padding-top: 7.5px;
+  margin-bottom: 96%;     
+  height: 250px;
+  width: 250px;
+  border-radius: 250px;
+  border: 3px solid black;  
+}
+#Menus {
+  background: black;
+  margin-top: 56px;
+  margin-left: 67px;
+  padding-top: 10px;  
+  height: 111px;
+  width: 111px;
+  border-radius: 150px;
+  border: 2px solid black;    
+  position: absolute;  
+}
+#Menus button {
+  background: black;
+  border-radius: 3px;
+  margin: 7px 5px;
+  padding: 5px 12px;
+  font-size: 12px;  
+}
+#counter {
+  font-size: 24px;
+}
+.colorButtons, .colorButtons:active, .colorButtons:focus{
+  height: 111px;
+  width: 111px;
+  border: none;
+  margin: 1%;
+  outline: none;
+  border: 2px solid black;
+}
+#green {
+  background: #003300;
+  border-radius: 100% 0 0 0;
+}
+#red {
+  background: #993300;
+  border-radius: 0 100% 0 0;
+}
+#yellow {
+  background: #cc9900;
+  border-radius: 0 0 0 100%;
+}
+#blue {
+  background: #000066;
+  border-radius: 0 0 100% 0;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin-bottom: 0;   
+  }
+  #simonGame{
+    background: black;
+    padding-top: 15px;
+    margin-bottom: 15%;   
+    height: 450px;
+    width: 450px;
+    border-radius: 250px;
+    border: 3px solid black;
+  }
+  #Menus {
+    background: black;
+    margin-top: 112px;
+    margin-left: 125px;
+    padding-top: 10px;  
+    height: 200px;
+    width: 200px;
+    border-radius: 150px;
+    border: 2px solid black;    
+    position: absolute;  
+  }
+  #Menus button {
+    border-radius: 3px;
+    margin: 7px 5px;
+    padding: 5px 12px;
+  }
+  .colorButtons, .colorButtons:active, .colorButtons:focus{
+    height: 200px;
+    width: 200px;
+    border: none;
+    margin: 1%;
+    outline: none;
+    border: 2px solid black;
+  }  
+}
+/*# sourceMappingURL=SimonGame.css.map */

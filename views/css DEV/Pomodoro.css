@@ -1,0 +1,42 @@
+body {
+  background-image: -ms-radial-gradient(center, circle, #0086b3 0%, #000 75%);
+  background-image: -webkit-radial-gradient(center, circle, #0086b3 0%, #000 75%);
+  color: white;
+  font: 24px/1.5 Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-weight: bold;  
+  padding-top: 80px;
+  font-size: 54px;
+}
+hr {
+  background-color:white;
+  height: 4px;
+  margin: 2% 16%;
+}
+button {
+  background: transparent;
+  border: none;
+}
+.timer {
+  display: inline-block; 
+  width: 240px;
+  height: 240px;
+  background-image: url("/../img/clock.png");
+}
+.timer p {
+  font-size: 48px;
+  float: left;
+}
+#menu {
+  padding-top: 3%;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+/*# sourceMappingURL=Pomodoro.css.map */

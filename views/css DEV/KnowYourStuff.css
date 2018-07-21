@@ -1,0 +1,47 @@
+body {
+  background: #0086b3;
+  color: white;
+  font: 24px/1.5 Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-weight: bold;  
+  padding-top: 75px;
+  font-size: 54px;
+}
+hr {
+  background-color: white;
+  height: 4px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+p {
+  text-align: left;
+  padding-top: 1%;
+  padding-left: 3%;  
+  font-size: 16px;  
+}
+input {
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  color: white;
+  border: 2px solid white;
+  font-size: 16px;
+}
+form {
+  margin-top: 2%;
+}
+#results {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size:72px;
+  }
+}
+
+/*# sourceMappingURL=KnowYourStuff.css.map */

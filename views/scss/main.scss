@@ -1,0 +1,69 @@
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+
+html {
+  height:100%;
+  overflow-x: hidden;
+
+}
+
+/* navbar */
+.nav{
+  display: inline-block;
+  float: none;
+  font-size: 14px;
+  height: 30px;  
+}
+.container-fluid {
+  text-align: center;
+}
+nav li {
+  float: left;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  color: rgb(204, 204, 204);
+}
+
+/* footer */
+footer { 
+  padding-top: 20px;
+  width: 100%;
+  height: 100px;
+  background: #003c5a;
+  background-size: cover; 
+  text-align: center;  
+}
+footer div {
+  display: inline-block; 
+}
+footer img {
+  height: 40px;
+  width: 40px; 
+}
+footer button {
+  height: 40px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5em;
+  font-size: 16px;
+  margin: 0 10px 10px 10px;
+}
+#copyright {
+  font-size: 10px;
+  color: white;
+  text-align: center; 
+}
+
+// Others
+.negativeCenter {
+  @include negativeCenter-align();
+} 
+.positiveCenter {
+  @include positiveCenter-align();
+}  
