@@ -8,7 +8,7 @@ body {
 }
 h1 {
   margin: 0;
-  font-weight: bold;  
+  font-weight: bold;
   padding-top: 80px;
   font-size: 54px;
 }
@@ -22,7 +22,7 @@ button {
   border: none;
 }
 .timer {
-  display: inline-block; 
+  display: inline-block;
   width: 240px;
   height: 240px;
   background-image: url("/../img/clock.png");

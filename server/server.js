@@ -2,7 +2,7 @@
 require('dotenv').config();
 const http = require('http');
 const multer = require('multer');
-const upload = multer({dest: 'uploads/'})
+const upload = multer({ dest: 'uploads/' });
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -14,11 +14,12 @@ const express = require('express');
 var app = express();
 
 // settings
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(useragent.express());
 hbs.registerPartials(__dirname + '/../views/partials');
 app.set('view engine', 'hbs');
+
 // Maintainence
 // app.use((req, res, next) => {
 // 	res.render('maintainence.hbs', {
@@ -60,35 +61,6 @@ app.get('/contact', (req, res) => {
 		Keywords: 'Ryan Foss, Web Development, Web Design, Front End, Back End, HTML, CSS, JavaScript, Express, MongoDB, Node, React',
 		css: 'contact'
 	});
-});
-
-app.post('/contact', (req, res) => {
-	let mailOpts, smtpTrans;
-  	smtpTrans = nodemailer.createTransport({
-	    host: 'smtp.gmail.com',
-	    port: 465,
-	    secure: true,
-	    auth: {
-	      user: process.env.GMAIL_USER,
-	      pass: process.env.GMAIL_PASS
-    	}
-  	});
-
-  	mailOpts = {
-	    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-	    to: process.env.GMAIL_USER,
-	    subject: 'New message from contact form',
-	    text: `${req.body.name} from ${req.body.company} (${req.body.email}) says: ${req.body.message}`
-  	};
-
-  	smtpTrans.sendMail(mailOpts, function (error, response) {
-	    if (error) {
-		    console.log(error);
-	    }
-	    else {
-	    	res.render('contact-success.hbs');
-	    }
-  	});
 });
 
 app.get('/AlanWatts', (req, res) => {
@@ -146,7 +118,7 @@ app.get('/KnowYourStuff', function(req, res){
 });
 
 app.post('/KnowYourStuff', upload.single('file'), (req, res, next) => {
-	
+
 	if(req.file){
 		var results = req.file;
 		res.render('KnowYourStuff.hbs', {
@@ -157,7 +129,7 @@ app.post('/KnowYourStuff', upload.single('file'), (req, res, next) => {
 			originalname: results.originalname,
 			encoding: results.encoding,
 			mimetype: results.mimetype,
-			size: results.size + 'kb'	
+			size: results.size + 'kb'
 		});
 	} else {
 
@@ -172,7 +144,7 @@ app.post('/KnowYourStuff', upload.single('file'), (req, res, next) => {
 			Description: 'General Tools',
 			Keywords: 'Ryan Foss',
 			css: 'KnowYourStuff',
-			language: language[0], 
+			language: language[0],
 			software,
 			ipaddress
 		});

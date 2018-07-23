@@ -49,29 +49,6 @@ function sendRequest(position) {
 // Update HTML
 function update(weather) {
   $("#description").html(weather.description);
-
-  if ($("#description").html() === "few clouds" || "broken clouds"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/113/sky-clouds-cloudy-weather-medium.jpg)');
-  }
-  if ($("#description").html() === "overcast clouds" || "scattered clouds"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/6566/sea-sky-clouds-weather-medium.jpg)');
-  }
-  if ($("#description").html() === "thunderstorms"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/799/city-lights-night-clouds-medium.jpg)');
-  }
-  if ($("#description").html() === "chance of rain"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/896/city-weather-glass-skyscrapers-medium.jpg)');
-  }
-  if ($("#description").html() === "light snow"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/4022/cold-snow-forest-trees-medium.jpeg)');
-  }
-  if ($("#description").html() === "sunny"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/3768/sky-sunny-clouds-cloudy-medium.jpg)');
-  }
-  if ($("#description").html() === "foggy"){
-    $('body').css('background-image', 'url(https://static.pexels.com/photos/6923/mountains-fog-green-beauty-large.jpg)');
-  }
-
   $("#temp").html(weather.temp + "°C");
   $("#humidity").html("Humidity: " + weather.humidity + "%");
   $("#wind").html("Wind Speed: " + weather.wind + " mph");

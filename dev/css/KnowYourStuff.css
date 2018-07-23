@@ -1,5 +1,11 @@
 body {
-  background: #0086b3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
+  url('/img/matrix.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
   color: white;
   font: 24px/1.5 Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -7,7 +13,7 @@ body {
 }
 h1 {
   margin: 0;
-  font-weight: bold;  
+  font-weight: bold;
   padding-top: 75px;
   font-size: 54px;
 }
@@ -20,8 +26,8 @@ hr {
 p {
   text-align: left;
   padding-top: 1%;
-  padding-left: 3%;  
-  font-size: 16px;  
+  padding-left: 3%;
+  font-size: 16px;
 }
 input {
   margin: 0 auto;
