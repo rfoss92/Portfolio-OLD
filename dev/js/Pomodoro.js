@@ -32,15 +32,15 @@ $("#sessionPlus").click( () => {
 
 
 //variables
-var minutes = $("#minutes").html();
-var timeleft = 60;
-var timeleft2 = $("#breakLength").html();
-var timeleft3 = $("#sessionLength").html();
-var sSwitch = 1;
-var resetPom = 1;
-var pauseStatus = false;
-var resetStatus = false;
-var end = 0;
+let minutes = $("#minutes").html();
+let timeleft = 60;
+let timeleft2 = $("#breakLength").html();
+let timeleft3 = $("#sessionLength").html();
+let sSwitch = 1;
+let resetPom = 1;
+let pauseStatus = false;
+let resetStatus = false;
+let end = 0;
 
 
 
@@ -62,6 +62,7 @@ startButton.onclick = () => {
   resetButton.onclick = () => {
     $("#seconds").html('00');
     $("#minutes").html($("#sessionLength").html());
+
     timeleft = 60;
     timeleft2 = $("#breakLength").html();
     timeleft3 = $("#sessionLength").html();
@@ -87,7 +88,7 @@ startButton.onclick = () => {
 
 
   //timer
-  var pomodoroTimer = setInterval( (end) => {
+  const pomodoroTimer = setInterval( (end) => {
     // resume
     if (pauseStatus === false && resetStatus === false) {
       // starting decreases the first minute
@@ -126,7 +127,7 @@ startButton.onclick = () => {
         }
 
         setInterval(pomodoroTimer);
-      } // end of time = 0
-    } // end of pause
-  }, 1000); // end of pomodoro timer
-}; // end of session.onclick
+      } 
+    } 
+  }, 1000); 
+}; 

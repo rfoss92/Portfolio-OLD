@@ -1,16 +1,13 @@
 body {
   text-align: center;
-  font-family:"Helvetica Neue", "Helvetica", "sans-serif";
-  font-weight: bold;
-  font-size: 16px;
+  font: bold 16px "Sans-Serif";
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
-  url('/img/webDevImage.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
+  url('/img/webDevImage.jpg') fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 /* ABOUT */
@@ -100,7 +97,7 @@ a p {
 }
 a:hover, a:visited, a:link, a:active
 {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media (max-width:999px) and (min-width:580px) {

@@ -20,7 +20,6 @@ var
 	// Dev mode
 	devBuild = (process.env.NODE_ENV === 'production'),
 
-
 	// folders
 	folder = {
 		src: 'dev/',
@@ -106,17 +105,8 @@ gulp.task('css', function () {
 
 // watch for changes
 gulp.task('watch', function () {
-
-  // html changes
   gulp.watch(folder.src + 'html/**/*', ['html']);
-
-  // partials changes
   gulp.watch(folder.src + 'partials/**/*', ['partials']);
-
-  // javascript changes
   gulp.watch(folder.src + 'js/**/*', ['js']);
-
-  // css changes
   gulp.watch(folder.src + 'css/**/*', ['css']);
-
 });
