@@ -26,7 +26,6 @@ h1 {
 p {
   margin-bottom: 16px;
 }
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +99,7 @@ a:hover, a:visited, a:link, a:active
   text-decoration: none;
 }
 
-@media (max-width:999px) and (min-width:580px) {
+@media (max-width: 999px) and (min-width: 580px) {
   .portfolio--images{
     width: 45%;
   }

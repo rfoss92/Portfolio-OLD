@@ -2,44 +2,42 @@
 {{> navbar}}
 <body>
 
-<div class="content">
-  <h1>Know Your Stuff</h1><hr>
+  <section class="content">
+    <h1>Know Your Stuff</h1>
 
-  <div class="row">
-    <div class="col-md-6">
+    <section class="get">
       <form action="/KnowYourStuff" method="post" enctype="multipart/form-data">
-        <label for="specs">Get Your Browser Settings</label>
-        </br>
+        <h2>Get Your Browser Settings</h2>
         <input id='submit' type="submit">
       </form>
-    </div>
 
-    <div class="col-md-6">
-      <p>Your IP: {{ipaddress}}</p>
-      <p>Your language setting: {{language}}</p>
-      <p>Your current software: {{software}}</p>
-    </div>
-  </div>
-  <hr>
+      <section class="row get-info">
+        <p class="col-sm-6">IP <br> {{ipaddress}}</p>      
+        <p class="col-sm-6">Language <br> {{language}}</p>      
+        <p class="col-sm-6">Software <br> {{software}}</p>      
+      </section>
+    </section>
 
-  <div class="row">
-    <div class="col-md-6">
+    <section class="get">
       <form action="/KnowYourStuff" method="post" enctype="multipart/form-data">
-        <label for="file">Get File Metadata</label>
-        <input id="file" type="file" name="file">
+        <h2>Get File Metadata</h2>
+        <label for="file" class="custom-file-upload">
+          Browse...
+        </label>
+        <input id="file" type="file" name="file"/>
         <input id="submit" type="submit">
       </form>
-    </div>
 
-    <div id='results' class="col-md-6">
-      <p>Name: {{originalname}}</p>
-      <p>Encoding: {{encoding}}</p>
-      <p>Type: {{mimetype}}</p>
-      <p>Size: {{size}}</p>
-    </div>
-  </div> 
-  <hr>
-</div>
+      <section id='results' class="row get-info">
+        <p class="col-sm-6">Name <br> {{originalname}}</p>      
+        <p class="col-sm-6">Encoding <br> {{encoding}}</p>      
+        <p class="col-sm-6">Type <br> {{mimetype}}</p> 
+        <p class="col-sm-6">Size <br> {{size}}</p>  
+      </section>
+    </section>
+
+  </section>
+
   <script src="/js/KnowYourStuff.js"></script>
 </body>
 {{> footer}}

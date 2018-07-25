@@ -134,7 +134,7 @@ app.post('/KnowYourStuff', upload.single('file'), (req, res, next) => {
 	} else {
 
 		var language = req.acceptsLanguages();
-		var software = "OS: " + req.useragent.os + ", Browser " + req.useragent.browser;
+		var software = req.useragent.os + ", " + req.useragent.browser;
 		var ipaddress = req.ip;
 		if (ipaddress.substr(0, 7) === "::ffff:") {
 	    	ipaddress = ipaddress.substr(7);
