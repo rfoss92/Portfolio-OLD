@@ -1,133 +1,90 @@
+(pomodoro => {
+  let minutes = $("#minutes").html();
+  let seconds = 60;
+  let breakLength = $("#breakLength").html();
+  let sessionLength = $("#sessionLength").html();
+  let flag = true;
+  let pauseStatus = true;
+  $("#pauseButton, #resetButton").prop('disabled', true);
 
-// Setting Session Timer
-$("#minutes").html($("#sessionLength").html());
+  // settings
+  sessionMinus.onclick = () => {    
+    if (sessionLength > 1) {
+      document.getElementById("sessionLength").innerHTML--;
+      sessionLength = $("#sessionLength").html();
+      $("#minutes").html(sessionLength);
+      minutes = sessionLength;
+    }
+  };
+  sessionPlus.onclick = () => {  
+    document.getElementById("sessionLength").innerHTML++;  
+    sessionLength = $("#sessionLength").html();
+    $("#minutes").html(sessionLength);
+    minutes = sessionLength;
+  };
+  breakMinus.onclick = () => {  
+    if (breakLength > 1) {
+      document.getElementById("breakLength").innerHTML--;   
+      breakLength = $("#breakLength").html();
+    }
+  };
+  breakPlus.onclick = () => {
+    document.getElementById("breakLength").innerHTML++;
+    breakLength = $("#breakLength").html();
+  };
 
-// Break Length
-$("#breakMinus").click( () => {
-  if ($("#breakLength").html() > 0) {
-    document.getElementById("breakLength").innerHTML--;   
-    timeleft2 = $("#breakLength").html();
-  }
-});
-$("#breakPlus").click( () => {
-  document.getElementById("breakLength").innerHTML++;
-  timeleft2 = $("#breakLength").html();
-});
-
-// Session Length
-$("#sessionMinus").click( () => {
-  if ($("#sessionLength").html() > 0) {
-    document.getElementById("sessionLength").innerHTML--;
-    $("#minutes").html($("#sessionLength").html());
-    minutes = $("#minutes").html();
-    timeleft3 = $("#sessionLength").html();
-  }
-});
-$("#sessionPlus").click( () => {
-  document.getElementById("sessionLength").innerHTML++;  
-  $("#minutes").html($("#sessionLength").html());
-  minutes = $("#minutes").html();
-  timeleft3 = $("#sessionLength").html();
-});
-
-
-//variables
-let minutes = $("#minutes").html();
-let timeleft = 60;
-let timeleft2 = $("#breakLength").html();
-let timeleft3 = $("#sessionLength").html();
-let sSwitch = 1;
-let resetPom = 1;
-let pauseStatus = false;
-let resetStatus = false;
-let end = 0;
-
-
-
-//Session
-startButton.onclick = () => {
-
-  $("#sessionPlus").prop('disabled', true)
-  $("#sessionMinus").prop('disabled', true)
-  $("#breakPlus").prop('disabled', true)
-  $("#breakMinus").prop('disabled', true)
-  $("#startButton").prop('disabled', true)
-
-  // pause
+  // menu
+  startButton.onclick = () => {
+    $("#pauseButton, #resetButton").prop('disabled', false);
+    $("#sessionPlus, #sessionMinus, #breakPlus, #breakMinus, #startButton").prop('disabled', true);
+    pauseStatus = false;      
+  }; 
   pauseButton.onclick = () => {
+    $("#pauseButton").prop('disabled', true);    
+    $("#startButton").prop('disabled', false);
+    pauseStatus = true;
+  };
+  resetButton.onclick = () => {
+    $("#pauseButton, #resetButton").prop('disabled', true);    
+    $("#sessionPlus, #sessionMinus, #breakPlus, #breakMinus, #startButton").prop('disabled', false);  
+    $("#seconds").html('00');
+    $("#minutes").html(sessionLength);
+    seconds = 60;
+    minutes = sessionLength;
+    flag = true;
     pauseStatus = true;
   };
 
-  // reset
-  resetButton.onclick = () => {
-    $("#seconds").html('00');
-    $("#minutes").html($("#sessionLength").html());
-
-    timeleft = 60;
-    timeleft2 = $("#breakLength").html();
-    timeleft3 = $("#sessionLength").html();
-    minutes = $("#sessionLength").html();
-    sSwitch = 1;
-    resetStatus = true;
-
-    $("#sessionPlus").prop('disabled', false);
-    $("#sessionMinus").prop('disabled', false);
-    $("#breakPlus").prop('disabled', false);
-    $("#breakMinus").prop('disabled', false);
-  };
-
-  //Resume
-  resume.onclick = () => {
-    pauseStatus = false;
-    resetStatus = false;
-    $("#sessionPlus").prop('disabled', true)
-    $("#sessionMinus").prop('disabled', true)
-    $("#breakPlus").prop('disabled', true)
-    $("#breakMinus").prop('disabled', true)
-  };
-
-
-  //timer
-  const pomodoroTimer = setInterval( (end) => {
-    // resume
-    if (pauseStatus === false && resetStatus === false) {
-      // starting decreases the first minute
+  // timer
+  setInterval( () => {  
+    if (!pauseStatus) {
       $("#minutes").html(minutes - 1);
-
-      timeleft--;
-
-      // how to handle the first digit in seconds
-      if (timeleft < 10) {
-        $("#seconds").html("0" + timeleft);
+      // change seconds      
+      seconds--;
+      if (seconds < 10) {
+        $("#seconds").html("0" + seconds);
       } else {
-        $("#seconds").html(timeleft);
-      } // end of how to handle the first digit in seconds
-
-      // time = 0
-      if (timeleft <= 0) {
-        // decrease minutes
+        $("#seconds").html(seconds);
+      } 
+      // change minutes
+      if (seconds <= 0) {
         minutes--;
         $("#minutes").html(minutes);
-
-        //reset seconds
-        timeleft = 60;
-
-        //switch between session and break
+        seconds = 60;
+        // switch session and break
         if (minutes <= 0) {
-          sSwitch = sSwitch * -1;
-          if (sSwitch < 0) {
-            document.getElementById("beep").play();
-            minutes = timeleft2;
-            $("#minutes").html(timeleft2);
+          $("#beep")[0].play();          
+          flag = !flag;       
+          if (!flag) {
+            minutes = breakLength;
+            $("#minutes").html(breakLength);
           } else {
-            document.getElementById("beep").play();
-            minutes = timeleft3;
-            $("#minutes").html(timeleft3);
+            minutes = sessionLength;
+            $("#minutes").html(sessionLength);
           }
         }
-
-        setInterval(pomodoroTimer);
+        setInterval();
       } 
     } 
   }, 1000); 
-}; 
+})();

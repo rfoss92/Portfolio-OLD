@@ -2,49 +2,43 @@
 {{> navbar}}
 <body>
 
-  <div class="content">
+  <section class="content">
 
     <h1>Pomodoro</h1><hr>
 
-    <section class="row">    
-      <div class="col-md-6">
-        <p>Break Length</p>
-        <button id="breakMinus">-</button>
-        <p1 id="breakLength">5</p1>
-        <button id="breakPlus">+</button>
-      </div>
-      <div class="col-md-6">
-        <p>Session Length</p>
+    <section class="settings row">
+      <section class="col-md-6">
+        <p>Session</p>
         <button id="sessionMinus">-</button>
-        <p1 id="sessionLength">3</p1>
+        <button id="sessionLength">3</button>
         <button id="sessionPlus">+</button>
-      </div>
+      </section>
+      <section class="col-md-6">
+        <p>Break</p>
+        <button id="breakMinus">-</button>
+        <button id="breakLength">5</button>
+        <button id="breakPlus">+</button>
+      </section>
     </section>
 
-    <div class="timer">
+    <section class="timer">
       <section class="negativeCenter">
-        <p id="minutes">0</p>
+        <p id="minutes">3</p>
         <p id="colon">:</p>
         <p id="seconds">00</p>
       </section>
-    </div>
+    </section>
 
-    <br>
-    <p id="menu">
+    <section class="menu">
       <button id="startButton">Start</button>
+      <button id="pauseButton">Pause</button>      
       <button id="resetButton">Reset</button>
-      <button id="pauseButton">Pause</button>
-      <button id="resume">Resume</button>
-    </p>
-    <hr>
+    </section>
 
-  </div>
+  </section>
 
-  <audio id="beep">
-    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/beep.mp3"/>
-    <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/beep.ogg"/>
-  </audio>
-
+  <audio id="beep" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/41203/beep.mp3"></audio>
   <script src="/js/Pomodoro.js"></script>
+
 </body>
 {{> footer}}

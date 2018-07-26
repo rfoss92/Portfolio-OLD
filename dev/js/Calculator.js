@@ -1,10 +1,10 @@
-calculator = function () {
+(calculator => {
 
-	let bottomNo = "", 
-		topNo = "", 
-		buttonValue = 0, 
-		solution = "", 
-		operators = ["+","-","/","*"];
+	let bottomNo = "";
+	let topNo = "";
+	let buttonValue = 0;
+	let solution = "";
+	let operators = ["+","-","/","*"];
 
 	$("button").click(function() {
 		buttonValue = $(this).val();
@@ -50,4 +50,4 @@ calculator = function () {
 		bottomNo = "";	
 	});
 
-}();
+})();
