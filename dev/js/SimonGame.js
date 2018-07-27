@@ -1,3 +1,5 @@
+// disable buttons when showing sequence
+
 //variables
 var colorArray = ["green", "red", "yellow", "blue"];
 var randomColorArray = [];

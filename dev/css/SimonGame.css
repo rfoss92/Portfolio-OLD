@@ -1,58 +1,53 @@
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
-  url('/img/wood.jpg');
+  color: white;
+  text-align: center;
+  font: bold 16px "Sans-Serif";    
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
+  url('/img/wood.jpg') fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;  color: white;
-  font-family: Helvetica;
-  font-weight: bold;
-  text-align: center;
+  background-size: cover; 
 }
 h1 {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0 0 110% 0;
+  margin-top: 37%;
 }
-#simonGame{
-  margin-top: -55px;
+.simonGame {
   background: black;
-  padding-top: 7.5px;
-  margin-bottom: 96%;
+  padding: 2% 0;
   height: 250px;
   width: 250px;
   border-radius: 250px;
-  border: 3px solid black;
 }
-#Menus {
+.simonGame-center {
   background: black;
-  margin-top: 56px;
-  margin-left: 67px;
-  padding-top: 10px;
   height: 111px;
   width: 111px;
   border-radius: 150px;
-  border: 2px solid black;
   position: absolute;
+  top: 28%;
+  left: 28%;  
 }
-#Menus button {
+.simonGame-menu{
+  margin-top: 10%;
+}
+.simonGame-menu button{
   background: black;
   border-radius: 3px;
   margin: 7px 5px;
   padding: 5px 12px;
-  font-size: 12px;
+  font-size: 1.25rem;
 }
-#counter {
-  font-size: 24px;
-}
-.colorButtons, .colorButtons:active, .colorButtons:focus{
+.simonGame-colorButtons {
   height: 111px;
   width: 111px;
   border: none;
-  margin: 1%;
+  margin: 1% .5%;
+}
+.simonGame-colorButtons, .simonGame-colorButtons:active, .simonGame-colorButtons:focus {
   outline: none;
-  border: 2px solid black;
 }
 #green {
   background: #003300;
@@ -73,41 +68,15 @@ h1 {
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 32px;
-    margin-bottom: 0;
+    font-size: 5rem;
   }
-  #simonGame{
-    background: black;
-    padding-top: 15px;
-    margin-bottom: 15%;
+  .simonGame {
+    padding: 1% 0;
     height: 450px;
     width: 450px;
-    border-radius: 250px;
-    border: 3px solid black;
   }
-  #Menus {
-    background: black;
-    margin-top: 112px;
-    margin-left: 125px;
-    padding-top: 10px;
+  .simonGame-center, .simonGame-colorButtons {
     height: 200px;
     width: 200px;
-    border-radius: 150px;
-    border: 2px solid black;
-    position: absolute;
-  }
-  #Menus button {
-    border-radius: 3px;
-    margin: 7px 5px;
-    padding: 5px 12px;
-  }
-  .colorButtons, .colorButtons:active, .colorButtons:focus{
-    height: 200px;
-    width: 200px;
-    border: none;
-    margin: 1%;
-    outline: none;
-    border: 2px solid black;
   }
 }
-/*# sourceMappingURL=SimonGame.css.map */
