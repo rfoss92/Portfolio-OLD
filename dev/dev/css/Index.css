@@ -13,8 +13,8 @@ body {
 /* ABOUT */
 
 .about {
-  padding: 0 9%;
-  text-align: left;
+  padding: 0 15%;
+  text-align: justify;
 }
 h1 {
   font-weight: bold;
@@ -31,8 +31,7 @@ p {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
-  margin: 3% 3%;
-  font-size: 5vw;
+  margin: 3% 15%;
 }
 .skills li {
   margin-top: 3%;
@@ -51,10 +50,10 @@ i {
     font-size: 64px;
   }
   .about {
-    padding: 0 25%;
+    padding: 0 30%;
   }
   .skills {
-    margin: 0 25%;
+    margin: 0 33%;
   }
   .skills li {
     width: 25%;

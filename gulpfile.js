@@ -1,3 +1,5 @@
+require('babel-core/register');
+require('babel-polyfill');
 const gulp = require('gulp');
 const newer = require('gulp-newer');
 const htmlclean = require('gulp-htmlclean');
@@ -31,7 +33,7 @@ gulp.task('watch', () => {
 gulp.task('html', () => {
   let out = folder.build + '';
   let page = gulp.src(folder.src + 'html/*.hbs')
-      .pipe(plumber())    
+      .pipe(plumber())
       .pipe(newer(out));
   if (!devBuild) {
     page = page.pipe(htmlclean());
@@ -44,7 +46,7 @@ gulp.task('html', () => {
 gulp.task('partials', () => {
   let out = folder.build + 'partials';
   let page = gulp.src(folder.src + 'partials/*.hbs')
-      .pipe(plumber())    
+      .pipe(plumber())
       .pipe(newer(out));
   if (!devBuild) {
     page = page.pipe(htmlclean());
@@ -56,7 +58,7 @@ gulp.task('partials', () => {
 // JavaScript processing
 gulp.task('js', () => {
   let jsbuild = gulp.src(folder.src + 'js/*.js')
-    .pipe(plumber())      
+    .pipe(plumber())
     .pipe(babel({
         presets: ['env'],
     }))
@@ -78,7 +80,7 @@ gulp.task('css', () => {
     postCssOpts.push(cssnano);
   }
   return gulp.src(folder.src + 'css/*.css')
-    .pipe(plumber())      
+    .pipe(plumber())
     .pipe(sass({
       outputStyle: 'nested',
       precision: 3,

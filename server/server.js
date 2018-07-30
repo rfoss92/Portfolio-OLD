@@ -30,8 +30,8 @@ hbs.registerHelper('getCurrentYear', () => {
 // routes
 app.get('/', (req, res) => {
 	res.render('index.hbs', {
-		title: 'Ryan Foss Portfolio',
-		Description: 'Ryan\'s Web Developer Portfolio',
+		title: 'Ryan Foss Software Developer Portfolio',
+		description: 'Front-End and Back End Software Developer and Javascript Specialist Portfolio for Ryan Foss',
 		Keywords: 'Ryan Foss, Web Developer, Web Designer, Front End, Back End, HTML, CSS, JavaScript, Express, MongoDB, Node, React',
 		css: 'Index'
 	});
