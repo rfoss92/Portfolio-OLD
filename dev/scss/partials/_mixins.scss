@@ -1,17 +1,28 @@
-@mixin negativeCenter-align($position: relative) {
-  display: inline-block; 	
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+@mixin bodyTheme() {
+  font: $font-stack;
+  color: $primary-color;
+  text-align: center;   
 }
-
-@mixin positiveCenter-align($position: relative) {
+@mixin background($bgSize: cover) {
+  -webkit-background-size: $bgSize;
+  -moz-background-size: $bgSize;
+  -o-background-size: $bgSize;
+  background-size: $bgSize;  
+  background-attachment: fixed;  
+}
+@mixin negativeCenter($translateY: translateY(-50%)) {
+  -webkit-transform: $translateY;
+  -ms-transform: $translateY;
+  transform: $translateY;
   display: inline-block; 	
-  position: $position;
+  position: relative;
   top: 50%;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
+}
+@mixin positiveCenter($translateY: translateY(50%)) {
+  -webkit-transform: $translateY;
+  -ms-transform: $translateY;
+  transform: $translateY;
+  display: inline-block; 	
+  position: relative;
+  top: 50%;
 }

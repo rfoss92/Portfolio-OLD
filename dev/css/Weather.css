@@ -1,13 +1,9 @@
 body {
-  color: white;
-  font: bold 24px Helvetica, Arial, sans-serif;
-  text-align: center;  
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%),
-  url(https://static.pexels.com/photos/113/sky-clouds-cloudy-weather-medium.jpg) fixed;
-  background-size: cover;
+  font-size: 24px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%),
+  url(https://static.pexels.com/photos/113/sky-clouds-cloudy-weather-medium.jpg);
 }
 h1 {
-  font-weight: bold;
   padding-top: 100px;
 }
 p {

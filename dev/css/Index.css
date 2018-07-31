@@ -1,13 +1,6 @@
 body {
-  text-align: center;
-  font: bold 16px "Sans-Serif";
-  color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
-  url('/img/webDevImage.jpg') fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
+  url('/img/webDevImage.jpg');
 }
 
 /* ABOUT */
@@ -17,7 +10,6 @@ body {
   text-align: left;
 }
 h1 {
-  font-weight: bold;
   font-size: 10vw;
   text-align: center;
   margin-bottom: 32px;
@@ -54,7 +46,8 @@ i {
     padding: 0 25%;
   }
   .skills {
-    margin: 0 25%;
+    font-size: 4vw;    
+    margin: 0 30%;
   }
   .skills li {
     width: 25%;

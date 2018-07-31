@@ -1,13 +1,7 @@
 body {
-  color: white;
-  font: bold 20px "Sans-Serif";
-  text-align: center; 
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
-  url('/img/deskCoffee.png') fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  font-size: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) 50%),
+  url('/img/deskCoffee.png'); 
 }
 .calcBG {
   background: #8b8989;

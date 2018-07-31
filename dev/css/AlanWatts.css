@@ -1,7 +1,6 @@
 body {
-  background: url("https://ichef.bbci.co.uk/images/ic/1920x1080/p02vf39n.jpg") fixed;
-  background-size: cover;
-  font: bold 16px/1.5 "Sans-Serif";
+  background-image: url("https://ichef.bbci.co.uk/images/ic/1920x1080/p02vf39n.jpg");
+  color: #333;
 }
 .intro {
   margin: 100px 6% 0 6%; 
@@ -21,8 +20,8 @@ p {
 }
 .main {
   padding: 6%;
-  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(204, 204, 204, 0.7) 20%); /* FF3.6+ */
+  background: rgb(204, 204, 204);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(204, 204, 204, 0.7) 20%);
 }
 .main-image {
   max-width: 90%;

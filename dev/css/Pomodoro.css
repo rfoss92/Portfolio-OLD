@@ -1,17 +1,13 @@
 body {
+  font-size: 24px;  
   background-image: -ms-radial-gradient(center, circle, #0086b3 0%, #000 75%);
   background-image: -webkit-radial-gradient(center, circle, #0086b3 0%, #000 75%);
-  background-attachment: fixed;  
-  color: white;
-  font: bold 24px/1.5 "Sans-Serif";
-  text-align: center; 
 }
 .content {
   min-height: calc(100vh - 200px) !important; 
 }
 h1 {
   margin-top: 100px;
-  font-weight: bold;
   font-size: 5rem;
 }
 hr {

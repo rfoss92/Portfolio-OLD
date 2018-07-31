@@ -2,56 +2,69 @@
 @import "partials/variables";
 @import "partials/mixins";
 
+// main
 html {
-  height:100%;
+  height: 100%;
   overflow-x: hidden;
+}
+body {
+  @include background();  
+  @include bodyTheme(); 
+}
+h1 {
+  font-weight: bold;
+}
+.content {
+  min-height: calc(100vh - 100px); 
+}
+.negativeCenter {
+  @include negativeCenter();
+}
+.positiveCenter {
+  @include positiveCenter();
 }
 
 /* navbar */
-.nav{
+.nav {
   display: inline-block;
   float: none;
   font-size: 14px;
-  height: 30px;
+  height: 30px; 
 }
 .container-fluid {
-  text-align: center;
+  text-align: center; 
 }
-nav li {
-  float: left;
-}
-nav a {
-  text-decoration: none;
-  color: white;
-}
-nav a:hover {
-  color: rgb(204, 204, 204);
+nav {
+  li {
+    float: left; 
+  }
+  a {
+    text-decoration: none;
+    color: white; 
+  }
+  a:hover {
+    color: #cccccc; 
+  }
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
 }
 
 /* footer */
 footer {
-  padding-top: 20px;
-  width: 100%;
-  height: 110px;
-  background: rgb(34, 34, 34);
-  background-size: cover;
-  text-align: center; }
-footer img {
-  height: 40px;
-  width: 40px;
-  margin: 0 12px 0 12px;
-}
-#copyright {
   font-size: 10px;
   color: white;
-  text-align: center;
-  padding-top: 1%;
-}
-
-// Others
-.negativeCenter {
-  @include negativeCenter-align();
-}
-.positiveCenter {
-  @include positiveCenter-align();
+  text-align: center;   
+  padding-top: 20px;
+  width: 100%;
+  height: 100px;
+  background: rgb(34, 34, 34);
+  background-size: cover;
+  img {
+    height: 40px;
+    width: 40px;
+    margin: 0 12px 10px 12px;
+  }
 }

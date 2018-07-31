@@ -1,5 +1,4 @@
-require('babel-core/register');
-require('babel-polyfill');
+'use strict';
 const gulp = require('gulp');
 const newer = require('gulp-newer');
 const htmlclean = require('gulp-htmlclean');
@@ -21,12 +20,13 @@ const folder = {
 };
 
 gulp.task('default', ['run', 'watch']);
-gulp.task('run', ['html', 'partials', 'css', 'js']);
+gulp.task('run', ['html', 'partials', 'css', 'sass', 'js']);
 gulp.task('watch', () => {
   gulp.watch(folder.src + 'html/**/*', ['html']);
   gulp.watch(folder.src + 'partials/**/*', ['partials']);
   gulp.watch(folder.src + 'js/**/*', ['js']);
   gulp.watch(folder.src + 'css/**/*', ['css']);
+  gulp.watch(folder.src + 'scss/**/*', ['sass']);  
 });
 
 // HTML processing
@@ -88,4 +88,11 @@ gulp.task('css', () => {
     }))
     .pipe(postcss(postCssOpts))
     .pipe(gulp.dest(folder.build + 'css/'));
+});
+
+// SASS processing
+gulp.task('sass', function () {
+  return gulp.src(folder.src + 'scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(folder.src + 'css/'));
 });
