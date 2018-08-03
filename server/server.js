@@ -37,12 +37,12 @@ app.get('/', (req, res) => {
 	});
 });
 
-app.get('/weather', (req, res) => {
-	res.render('Weather.hbs', {
-		title: 'Weather',
-		Description: 'Your Weather Report',
-		Keywords: 'Ryan Foss, Weather',
-		css: 'Weather'
+app.get('/Welcome', (req, res) => {
+	res.render('Welcome.hbs', {
+		title: 'Welcome',
+		Description: 'Your Welcome Page',
+		Keywords: 'Ryan Foss, Welcome',
+		css: 'Welcome'
 	});
 });
 

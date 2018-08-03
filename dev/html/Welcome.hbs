@@ -6,10 +6,10 @@
 	  <h1>Good Morning!</h1>
 
 	  <section class="weather">
-		  <div id="date"></div>	  	
+		  <div id="date">Loading...</div>	  	
 		  <div id="time"></div>
 		  <div id="description"></div>
-		  <div id="temp">Loading...</div>
+		  <div id="temp"></div>
 		  <div id="humidity"></div>
 		  <div id="wind"></div>
 	  </section>
@@ -17,7 +17,7 @@
 		<div class="row">
 
 			<section class="col-sm-6">
-	    	<button type="button" class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia Article</button>
+	    	<button type="button" class="btn btn-primary btn-lg" onclick="window.open('https://en.wikipedia.org/wiki/Special:Random');">Random Wikipedia Article</button>
 
 	      <form>
 	        <div class="input-group">
@@ -43,6 +43,6 @@
 		</div>
 	</div>
 
-<script src="/js/Weather.js"></script>
+<script src="/js/Welcome.js"></script>
 </body>
 {{> footer}}

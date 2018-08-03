@@ -91,7 +91,7 @@
           $("#output").prepend(
             "<div class='well'><a href=" 
             + data[3][i] 
-            + "><h2>"
+            + " target='_blank'><h2>"
             + data[1][i]
             + "</h2><p>" 
             + data[2][i]
