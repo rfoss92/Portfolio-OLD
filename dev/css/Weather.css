@@ -1,23 +1,50 @@
 body {
   font-size: 24px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 50%),
-  url(https://static.pexels.com/photos/113/sky-clouds-cloudy-weather-medium.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 50%),
+  url(https://wallpapercave.com/wp/CdBbiZ7.jpg);
 }
 h1 {
   padding-top: 100px;
 }
-p {
-  padding: 3%;
+h2, a, a:hover {
+  color: white;
+  text-decoration: none;
 }
-.main {
+.weather {
   display: flex;
   flex-wrap: wrap;
-  margin: 6% 30%;
-  justify-content: space-between;
+  justify-content: space-between;  
+  margin: 3% 6%;
 }
-
+p {
+  margin: 1% 6%;
+  font-size: 32px;
+}
+.quote {
+  margin: 3% 6%;
+  height: 300px;
+}
+img {
+  cursor: pointer;
+  width: auto;
+  height: 36px;
+}
+.content button {
+  box-shadow: 3px 3px 5px #333;
+}
+.well {
+  background: #286090;
+}
+#output{
+  margin:32px;
+}
+.input-group{
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
 @media only screen and (min-width: 768px) {
-  h1{
+  h1 {
     font-size: 10rem;
   }
 }

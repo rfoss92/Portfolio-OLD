@@ -1,0 +1,7 @@
+finish react course
+https 
+combine weather app with know your stuff
+use react to create a single page app
+make slideshow for portfolio
+typescript
+next.js

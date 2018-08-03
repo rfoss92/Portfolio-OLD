@@ -11,7 +11,8 @@
   month = (month < 10 ? "0" : "") + month;
   let day  = date.getDate();
   day = (day < 10 ? "0" : "") + day;
-  let time = month + "/" + day + "/" + year + " " + hour + ":" + min;
+  date = month + "/" + day + "/" + year;
+  let time = hour + ":" + min;
 
   // GeoLocation
   if (navigator.geolocation) {
@@ -43,11 +44,60 @@
 
   // Update HTML
   function update(weather) {
-    $("#time").html(time);    
+    $("#date").html(date);    
+    $("#time").html(time);      
     $("#description").html(weather.description);
     $("#temp").html(weather.temp + "°C");
     $("#humidity").html("Humidity: " + weather.humidity + "%");
     $("#wind").html("Wind Speed: " + weather.wind + " mph");
   }
 
+})();
+
+(quote => {
+  var randomQuote = "";
+  var randomAuthor = "";
+
+  $("#quoteButton").on("click", function() {
+    var url =
+      "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
+    $.getJSON(url, function(data) {
+      $("#quote-content").html('" ' + data.quoteText + ' "');
+      $("#quote-author").html(" - " + data.quoteAuthor);
+      randomQuote = document.getElementById("quote-content").textContent;
+      randomAuthor = document.getElementById("quote-author").textContent;
+    });
+  });
+
+  $("#tweetLink").on("click", function() {
+    window.open(
+      "https://twitter.com/intent/tweet?text=" + randomQuote + randomAuthor
+    );
+  });
+})();
+
+(wiki => {
+  $("form").on("submit", function(e){
+  e.preventDefault();
+    var searchTerm = $("#searchTerm").val();
+    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?";
+    $.ajax({
+      url: url,
+      type: "GET",
+      async: false,
+      dataType: "json",
+      success: function(data, status, jqXHR){
+        for(var i = 0; i < data[1].length; i++) {
+          $("#output").prepend(
+            "<div class='well'><a href=" 
+            + data[3][i] 
+            + "><h2>"
+            + data[1][i]
+            + "</h2><p>" 
+            + data[2][i]
+            + "</p></a></div>");
+        }
+      }
+    })
+  })
 })();
