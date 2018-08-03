@@ -1,14 +1,10 @@
 body {
-  font-size: 24px;
+  font-size: 32px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 50%),
   url(https://wallpapercave.com/wp/CdBbiZ7.jpg);
 }
 h1 {
   padding-top: 100px;
-}
-h2, a, a:hover {
-  color: white;
-  text-decoration: none;
 }
 .weather {
   display: flex;
@@ -16,33 +12,52 @@ h2, a, a:hover {
   justify-content: space-between;  
   margin: 3% 6%;
 }
+.row {
+    text-align: center;
+}
+.row button {
+  box-shadow: 3px 3px 5px #333;
+}
+
+form {
+  margin-top: 2%;  
+  display: flex;
+  justify-content: space-around; 
+}
+.input-group {
+  width: 25%;
+}
+#output{
+  display: inline-block;
+  margin-top: 2%;
+  width: 50%;
+}
+#output p{
+  font-size: 16px;
+}
+h2 {
+  font-size: 32px;
+} 
+a, a:hover {
+  color: white;
+  text-decoration: none;
+}
+.well {
+  background: #286090; 
+}
+
+
+
 p {
   margin: 1% 6%;
   font-size: 32px;
 }
-.quote {
-  margin: 3% 6%;
-  height: 300px;
-}
 img {
   cursor: pointer;
   width: auto;
-  height: 36px;
+  height: 45px;
 }
-.content button {
-  box-shadow: 3px 3px 5px #333;
-}
-.well {
-  background: #286090;
-}
-#output{
-  margin:32px;
-}
-.input-group{
-  margin-left:auto;
-  margin-right:auto;
-  width:50%;
-}
+
 @media only screen and (min-width: 768px) {
   h1 {
     font-size: 10rem;

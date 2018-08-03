@@ -14,20 +14,11 @@
 		  <div id="wind"></div>
 	  </section>
 
-	  <section class="quote">	  
-		  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
-			<br><br><a id=tweetLink><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
-		  <p id="quote-content"></p>
-		  <p id="quote-author"></p>
-	  </section>
+		<div class="row">
 
-	  <section>
-	    <p>
-	    	<button type="button" class="btn btn-primary btn-lg" href=https://en.wikipedia.org/wiki/Special:Random target="_blank">
-	    		Random Wikipedia Article
-	    	</button>
-	    </p>
-	    <div class="container">
+			<section class="col-sm-6">
+	    	<button type="button" class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia Article</button>
+
 	      <form>
 	        <div class="input-group">
 	    			<input id="searchTerm"  type="text" class="form-control" placeholder="Search...">
@@ -37,11 +28,19 @@
 		      		</button>
 	    			</div>
 	  			</div>
-	        <div id="output"></div>
 	      </form>
-	    </div>
-		</section>
+	      <div id="output"></div>	      
 
+			</section>	
+
+			<section class="col-sm-6 quote">
+			  <button type="button" class="btn btn-primary btn-lg" id=quoteButton>Get Quote!</button>
+				<a id="tweetLink"><img src="https://cdn3.iconfinder.com/data/icons/social-icons-5/606/Twitter.png" /></a>		  
+			  <p id="quote-content"></p>
+			  <p id="quote-author"></p>
+			</section>
+
+		</div>
 	</div>
 
 <script src="/js/Weather.js"></script>
