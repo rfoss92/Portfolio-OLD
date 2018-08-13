@@ -73,15 +73,6 @@ app.get('/Pomodoro', (req, res) => {
 	});
 });
 
-app.get('/TwitchStreamers', (req, res) => {
-	res.render('TwitchStreamers.hbs', {
-		title: 'Twitch Streamers',
-		Description: 'A list of Twitch Streamers and their status',
-		Keywords: 'Ryan Foss, Twitch, Streamers',
-		css: 'TwitchStreamers'
-	});
-});
-
 app.get('/Calculator', (req, res) => {
 	res.render('Calculator.hbs', {
 		title: 'Calculator',
