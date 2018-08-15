@@ -1,6 +1,3 @@
-github pages for most projects
-add 'Live / Code' on main page
-
 clean up welcome app
 finish react course
 https 
