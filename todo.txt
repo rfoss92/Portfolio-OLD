@@ -1,6 +1,8 @@
+github pages for most projects
+add 'Live / Code' on main page
+
 finish react course
 https 
-combine weather app with know your stuff
 use react to create a single page app
 make slideshow for portfolio
 typescript
