@@ -1,4 +1,3 @@
-clean up welcome app
 finish react course
 https 
 use react to create a single page app
