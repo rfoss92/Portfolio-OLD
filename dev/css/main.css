@@ -1,8 +1,6 @@
-html {
-  height: 100%;
-  overflow-x: hidden; }
-
 body {
+  height: 100%;
+  overflow-x: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,7 +8,8 @@ body {
   background-attachment: fixed;
   font: bold 16px/1.5 Helvetica, Arial, sans-serif;
   color: white;
-  text-align: center; }
+  text-align: center; 
+}
 
 h1 {
   font-weight: bold; }

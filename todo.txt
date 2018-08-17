@@ -1,15 +1,10 @@
-OCC
-mymovies - highlight the current list on the page
-
-change main.css
-clean up portfolio structure
-
 SEO
 Accessibilty regulations
-
+OCC
 finish react course
 https 
 use react to create a single page app
 make slideshow for portfolio
 typescript
 next.js
+wordpress
