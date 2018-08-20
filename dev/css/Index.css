@@ -38,7 +38,7 @@ p {
 }
 .skills li {
   margin-top: 3%;
-  width: 30%;
+  width: 40%;
   overflow: hidden;
 }
 i {
@@ -122,10 +122,10 @@ a:visited
   }
   .skills {
     font-size: 4vw;    
-    margin: 0 30%;
+    margin: 0 15%;
   }
   .skills li {
-    width: 25%;
+    width: 15%;
   }
   i {
     font-size: 48px;
