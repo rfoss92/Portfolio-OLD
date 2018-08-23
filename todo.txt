@@ -1,7 +1,14 @@
 SEO
+compress images
+increase loading speed
 Accessibilty regulations
 review analytics and adwords
 ecommerce
+IBM Commerce 7 platform 
+Web Content Management platforms
+JIRA
+
+clean up portfolio structure
 OCC
 finish react course
 https 
