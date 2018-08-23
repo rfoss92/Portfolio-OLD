@@ -19,9 +19,9 @@ hbs.registerHelper('getCurrentYear', () => {
 // routes
 app.get('/', (req, res) => {
 	res.render('index.hbs', {
-		title: 'ryanmfoss - Ryan Foss Web Developer Portfolio',
-		description: 'Front-End and Back-End Web Developer and Javascript Specialist Portfolio for Ryan Foss',
-		Keywords: 'ryanmfoss, Ryan Foss, Software Developer, Web Developer, Web Designer, Front-End, Back-End, HTML, CSS, JavaScript, Node.js, React.js',
+		title: 'Ryan Foss - Quick, Clean Web Development',
+		description: 'Web Developer that specializing in Javascript to create responsive, clean websites',
+		Keywords: 'ryanmfoss, Ryan Foss, Web Developer, Web Designer, JavaScript Specialist, Node.js Specialist, React.js Specialist',
 		css: 'Index'
 	});
 });
