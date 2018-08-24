@@ -1,3 +1,4 @@
+job prep:
 SEO
 compress images
 increase loading speed
@@ -8,6 +9,8 @@ IBM Commerce 7 platform
 Web Content Management platforms
 JIRA
 
+Other:
+create readme for repos
 clean up portfolio structure
 OCC
 finish react course
